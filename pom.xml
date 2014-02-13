@@ -67,10 +67,10 @@
         </extension>
       </extensions>
     </build>
-    
+
     <scm>
-      <connection>scm:git:ssh://github.com/jenkinsci/repoclient-plugin.git</connection>
-      <developerConnection>scm:git:ssh://git@github.com/jenkinsci/repoclient-plugin.git</developerConnection>
+      <connection>scm:git:ssh://github.com:Tantusch/repoclient-plugin.git</connection>
+      <developerConnection>scm:git:ssh://git@github.com:Tantusch/repoclient-plugin.git</developerConnection>
       <url>https://github.com/jenkinsci/repoclient-plugin</url>
     </scm>
 
