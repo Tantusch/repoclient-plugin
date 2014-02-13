@@ -1,14 +1,12 @@
 package org.jenkinsci.plugins.repoclient.client;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotSame;
-import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  * 
@@ -249,7 +247,8 @@ public class VersionTest {
 		versions.add(new Version("1.2.3.4.yyy.xxx.qualifier"));
 		versions.add(new Version("2.2.0.99.96"));
 		versions.add(new Version("2.2.0.99.104"));
-		versions.add(new Version("2.2.0.99.110"));
+		versions.add(new Version("2.2.0.99.110-SNAPSHOT"));
+        versions.add(new Version("2.2.0.99.110"));
 		versions.add(new Version("3.0.1.0-12"));
 		versions.add(new Version("3.0.1.0-14"));
 		List<Version> versionsSorted = new ArrayList<Version>();

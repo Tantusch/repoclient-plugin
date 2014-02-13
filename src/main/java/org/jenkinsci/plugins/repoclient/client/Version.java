@@ -1,7 +1,8 @@
 package org.jenkinsci.plugins.repoclient.client;
 
+import org.apache.maven.artifact.versioning.DefaultArtifactVersion;
+
 import java.io.Serializable;
-import java.text.Collator;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -85,7 +86,7 @@ public class Version implements Serializable, Comparable<Version> {
 		while (strtok.hasMoreTokens()) {
 			String digit = strtok.nextToken();
 			digitStrings.add(digit);
-			Integer val = null;
+			Integer val;
 			try {
 				val = Integer.valueOf(digit);
 			} catch (NumberFormatException ex) {
@@ -261,17 +262,8 @@ public class Version implements Serializable, Comparable<Version> {
 	 * @return -1, 0, +1
 	 */
 	public int compareTo(Version ver) {
-		int result = 0;
-		for (int i = 0; i < digits.size(); i++) {
-			result = getValue(i).compareTo(ver.getValue(i));
-			if (result != 0) {
-				break;
-			}
-		}
-		if (result == 0) {
-			result = Collator.getInstance().compare(qualifier,
-					ver.getQualifier());
-		}
-		return result;
+        DefaultArtifactVersion version = new DefaultArtifactVersion(toString());
+        DefaultArtifactVersion anotherVersion = new DefaultArtifactVersion(ver.toString());
+        return version.compareTo(anotherVersion);
 	}
 }
