@@ -67,27 +67,7 @@
         </extension>
       </extensions>
     </build>
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.11</version>
-                <configuration>
-                    <configLocation>config/sun_checks.xml</configLocation>
-                </configuration>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>checkstyle</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
-        </plugins>
-    </reporting>
-
-
+    
     <scm>
       <connection>scm:git:ssh://github.com/jenkinsci/repoclient-plugin.git</connection>
       <developerConnection>scm:git:ssh://git@github.com/jenkinsci/repoclient-plugin.git</developerConnection>
