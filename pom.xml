@@ -71,7 +71,7 @@
     <scm>
       <connection>scm:git:ssh://github.com:Tantusch/repoclient-plugin.git</connection>
       <developerConnection>scm:git:ssh://git@github.com:Tantusch/repoclient-plugin.git</developerConnection>
-      <url>https://github.com/jenkinsci/repoclient-plugin</url>
+      <url>https://github.com/Tantusch/repoclient-plugin</url>
     </scm>
 
     <repositories>
