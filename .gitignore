@@ -1,2 +1,5 @@
 work
 target
+.project
+.classpath
+repoclient-plugin.iml
